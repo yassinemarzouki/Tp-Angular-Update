@@ -1,0 +1,26 @@
+<p>offres d'emploi</p>
+<p>listEmploi</p>
+<input type="text" name="entreprise" [(ngModel)]="ref" (ngModelChange)="searchEntr()">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let emploi of listEmploi">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{emploi.reference}}</h5>
+              <p class="card-text">Entreprise:{{emploi.entreprise}}</p>
+              <p class="card-text">Emploi:{{emploi.titre}}</p>
+              <div >
+              <button id="b2" class="btn btn-primary"  [disabled]="emploi.etat==false">Postuler</button>
+            </div>
+            <div >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div >
+            <button class="btn btn-primary" (click)="calculate()" style="margin-right: 20%;">Bilan</button>
+            <p>{{result}}</p>
+          </div>
+        
+        
+
